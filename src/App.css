@@ -1,11 +1,10 @@
-
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #020631;
+  background-color: #f0f0f3;
 }
 
 .app {
@@ -85,4 +84,40 @@ h2 {
   font-weight: 700;
   font-style: normal;
   color: grey;
+}
+.border {
+  margin-top: 50px;
+  min-height: 500px;
+  background-color: rgb(17, 17, 104);
+  width: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 10px;
+}
+.app .todos .cross {
+  margin-top: 0.8em;
+  width: 20em;
+  height: 2em;
+  background-color: rgb(15, 211, 8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+.app .todos .cross .left-cross {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app .todos .cross .left-cross p {
+  text-decoration: line-through;
+  margin-left: 3px;
+  font-size: medium;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(0, 0, 0);
 }
