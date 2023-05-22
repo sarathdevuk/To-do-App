@@ -1,5 +1,7 @@
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
+import {RiDeleteBin7Fill} from 'react-icons/ri'
+
 
 function App() {
   const [toDos, setToDos] = useState([]);
@@ -7,7 +9,7 @@ function App() {
 
   const addTodo = () => {
     if (input.trim() !== "") {
-      setToDos([...toDos, { id: Date.now(), text: input, status: false }]);
+      setToDos( [...toDos, { id: Date.now(), text: input, status: false }]);
       localStorage.setItem(
         "input",
         JSON.stringify([
@@ -45,7 +47,7 @@ function App() {
         </div>
         <div className="subHeading">
           <br />
-          <h2>Have a nice day ... </h2>
+          <h3>Dreams don't work unless you do...! </h3>
         </div>
         <div className="input">
           <input
@@ -71,6 +73,7 @@ function App() {
                             obj2.status = e.target.checked;
                   
                           }
+                          localStorage.setItem('input', JSON.stringify(toDos));
                           return obj2;
                         })
                       );
@@ -83,30 +86,16 @@ function App() {
                   <p>{obj.text}</p>
                 </div>
                 <div className="right">
-                  <i
+                  <RiDeleteBin7Fill
                     onClick={() => deleteTodo(obj.id)}
                     className="fas fa-times"
-                  ></i>
+                  ></RiDeleteBin7Fill>
                 </div>
               </div>
             );
           })}
 
-          {/* <br />
-          <h2>Completed Tasks</h2>
-          <br />
-          {toDos.map((obj) => {
-            if (obj.status) {
-              return (
-                <div>
-                  <ul className="cmp">
-                    <li>{obj.text}</li>
-                  </ul>
-                </div>
-              );
-            }
-            return null;
-          })} */}
+        
         </div>
       </div>
     </div>

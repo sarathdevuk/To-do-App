@@ -19,8 +19,8 @@ body {
 }
 
 .app h1,
-h2 {
-  color: white;
+h3 {
+  color: rgb(255, 255, 255);
 }
 
 .app .input {
@@ -83,7 +83,7 @@ h2 {
   font-size: medium;
   font-weight: 700;
   font-style: normal;
-  color: grey;
+  color: rgb(0, 0, 0);
 }
 .border {
   margin-top: 50px;
